@@ -75,7 +75,9 @@ def check_for_cry():
 
 @app.route('/timestamps', methods=['GET'])
 def get_timestamps():
-    return jsonify(timestamps)
+    response = jsonify(timestamps)
+    timestamps = []
+    return response
 
 
 def listen_for_sound():
