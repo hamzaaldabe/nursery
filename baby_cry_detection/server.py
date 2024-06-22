@@ -10,12 +10,13 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 # Audio recording parameters
-FORMAT = pyaudio.paInt16
+FORMAT = pyaudio.paInt32
 CHANNELS = 1
 RATE = 44100
 CHUNK = 1024
+DURATION = 5
 THRESHOLD = 5000
-RECORD_SECONDS = 12
+RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "recorded.wav"
 timestamps = []
 
