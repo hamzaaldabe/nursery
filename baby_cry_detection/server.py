@@ -66,7 +66,7 @@ def check_for_cry():
         # Clean the output
         output = result.stdout.strip()
         print("Raw Output:", output)
-        return int(output) if output.isdigit() else 0
+        return int(output[0])
     except subprocess.CalledProcessError as e:
         print(f"Error running detection script: {e}")
         print("Output:", e.stdout)
